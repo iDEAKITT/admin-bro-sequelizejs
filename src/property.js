@@ -26,7 +26,7 @@ const TYPES_MAPPING = [
 
 class Property extends BaseProperty {
   constructor(sequelizePath) {
-    super({ path: sequelizePath.field })
+    super({ path: sequelizePath.field, isId: sequelizePath.primaryKey})
     this.sequelizePath = sequelizePath
   }
 
